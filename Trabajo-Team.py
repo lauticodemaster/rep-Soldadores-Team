@@ -60,7 +60,7 @@ print("La suma de los dígitos es:", suma)
 # ---------------------------------
 
 
-# 5. Maximiliano
+# 5. Maximiliano Reinoso
 # ---------------------------------
 # Escribí tu código acá
 # ---------------------------------
@@ -112,7 +112,7 @@ for caracter in cadena:
 # ---------------------------------
 
 
-# 10. Maximiliano
+# 10. Maximiliano Reinoso
 # ---------------------------------
 # Escribí tu código acá
 # ---------------------------------
@@ -232,13 +232,13 @@ if __name__ == "__main__":
 # ---------------------------------
 
 
-# 19. Maximiliano Méndez
+# 19. Maximiliano Reinoso
 # ---------------------------------
 # Escribí tu código acá
 # ---------------------------------
 
 
-# 20. Maximiliano (cagaste)
+# 20. Maximiliano Reinoso
 # ---------------------------------
 # Escribí tu código acá
 # ---------------------------------
