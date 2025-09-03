@@ -54,13 +54,35 @@ print("La suma de los dígitos es:", suma)
 
 # 6. Leonel Fanchinelli
 # ---------------------------------
-# Escribí tu código acá
+
+# solicito el texto
+texto = "La lluvia en Mendoza es escasa"
+
+# obtengo el tamanño
+tamano = len(texto)
+
+# muestro el resultado
+print("El tamaño de la cadena es:", tamano)
 # ---------------------------------
 
 
-# 7. Maximiliano Méndez
+# 7. Leonel Fachienlli
 # ---------------------------------
-# Escribí tu código acá
+# pido la cadena al usuario
+cadena = input("Ingrese una cadena de texto: ")
+
+# calculo el tamaño de la cadena
+tamano = len(cadena)
+
+# cuento las vocales
+contador_vocales = 0
+for caracter in cadena.lower():   # .lower() convierte todo a minúsculas
+    if caracter in "aeiou":
+        contador_vocales += 1
+
+# muestro los resultados
+print("El tamaño de la cadena es:", tamano)
+print("La cantidad de vocales es:", contador_vocales)
 # ---------------------------------
 
 
@@ -101,7 +123,14 @@ for caracter in cadena:
 
 # 12. Leonel Fanchinelli
 # ---------------------------------
-# Escribí tu código acá
+cadena = "hipopotamo"
+
+# extraigo la cuarta y quinta letra
+cuarta = cadena[3]
+quinta = cadena[4]
+#doy las letras que se pidieron 
+print("Cuarta letra:", cuarta)
+print("Quinta letra:", quinta)
 # ---------------------------------
 
 
