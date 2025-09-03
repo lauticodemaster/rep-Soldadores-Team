@@ -128,7 +128,7 @@ cadena = "hipopotamo"
 # extraigo cuarta y quinta letra
 cuarta = cadena[3]
 quinta = cadena[4]
-#escribo las letras extraidas de la palabra
+#escribo las letras extraidas de la palabra 
 print("Cuarta letra:", cuarta)
 print("Quinta letra:", quinta)
 # ---------------------------------
