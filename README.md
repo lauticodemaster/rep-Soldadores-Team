@@ -22,6 +22,6 @@
 
 ###
 
-<p align="left">Repositorio colaborativo para el desarrollo del trabajo práctico grupal de clases, métodos y parámetros.</p>
+<p align="left">Repositorio colaborativo para el desarrollo de trabajos prácticos grupales de la Tecnicatura en Programación.</p>
 
 ###
