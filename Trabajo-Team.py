@@ -109,8 +109,7 @@ print(nuevaPalabra)
 # 14. Mailén Ortiz
 # ---------------------------------
 
-
-
+# En Python no hay variables de tipo valor como en Java. Todo en Python es un objeto y las variables apuntan a ese objeto en memoria. Si el objeto es inmutable (como números, strings o tuplas), cambiar otra variable que apunte al mismo objeto no lo afectae. Si el objeto es mutable (como listas o diccionarios), cualquier cambio desde una variable afecta a las demás que apuntan al mismo objeto.
 
 # ---------------------------------
 
