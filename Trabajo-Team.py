@@ -68,13 +68,21 @@ print("La suma de los dígitos es:", suma)
 
 # 6. Leonel Fanchinelli
 # ---------------------------------
-# Escribí tu código acá
+
+# solicito el texto
+texto = "La lluvia en Mendoza es escasa"
+
+# obtengo el tamanño
+tamano = len(texto)
+
+# muestro el resultado
+print("El tamaño de la cadena es:", tamano)
 # ---------------------------------
 
 
-# 7. Maximiliano Méndez
+# 7. Leonel Fachienlli
 # ---------------------------------
-# Escribí tu código acá
+
 # ---------------------------------
 
 
@@ -126,7 +134,7 @@ for caracter in cadena:
 
 # 12. Leonel Fanchinelli
 # ---------------------------------
-# Escribí tu código acá
+
 # ---------------------------------
 
 
