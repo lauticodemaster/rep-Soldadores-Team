@@ -129,44 +129,77 @@ for caracter in cadena:
 # ---------------------------------
 
 
-# 17. Leonel Fanchinelli
-# ---------------------------------
-# Escribí tu código acá
-# ---------------------------------
-
-
-# 18. Nicolás Ibañez
+# 17/18 Luciano Nicolas Ibañez
 # ---------------------------------
 from datetime import date
 
 class FuncionesPrograma:
+
     @staticmethod
-    def get_fecha_date(dia, mes, anio):
-        """
-        Retorna un objeto date si la fecha es válida,
-        sino lanza una excepción ValueError.
-        """
+    def getFechaString(fecha: date) -> str:
+        # Ponemos el nombre de cada numero en formato cadena
+        dias = {
+            1: "Uno", 2: "Dos", 3: "Tres", 4: "Cuatro", 5: "Cinco",
+            6: "Seis", 7: "Siete", 8: "Ocho", 9: "Nueve", 10: "Diez",
+            11: "Once", 12: "Doce", 13: "Trece", 14: "Catorce", 15: "Quince",
+            16: "Dieciséis", 17: "Diecisiete", 18: "Dieciocho", 19: "Diecinueve", 20: "Veinte",
+            21: "Veintiuno", 22: "Veintidós", 23: "Veintitrés", 24: "Veinticuatro", 25: "Veinticinco",
+            26: "Veintiséis", 27: "Veintisiete", 28: "Veintiocho", 29: "Veintinueve", 30: "Treinta",
+            31: "Treinta y uno"
+        }
+
+        # Anotamos los meses pa
+        meses = {
+            1: "Enero", 2: "Febrero", 3: "Marzo", 4: "Abril", 5: "Mayo", 6: "Junio",
+            7: "Julio", 8: "Agosto", 9: "Septiembre", 10: "Octubre", 11: "Noviembre", 12: "Diciembre"
+        }
+
+        # Anotamos algunos años comunes(podemos todos pero nos quedamos aca hasta el año q viene)
+        anios = {
+            1900: "mil novecientos",
+            1910: "mil novecientos diez",
+            1920: "mil novecientos veinte",
+            1930: "mil novecientos treinta",
+            1940: "mil novecientos cuarenta",
+            1950: "mil novecientos cincuenta",
+            1960: "mil novecientos sesenta",
+            1970: "mil novecientos setenta",
+            1980: "mil novecientos ochenta",
+            1990: "mil novecientos noventa",
+            2000: "dos mil",
+            2010: "dos mil diez",
+            2020: "dos mil veinte",
+            2024: "dos mil veinticuatro"
+        }
+
+        # Las convertimos para q sea parte de la fecha y de un retorno mejor
+        dia_str = dias[fecha.day]
+        mes_str = meses[fecha.month]
+        anio_str = anios[fecha.year]
+
+        return f"{dia_str} de {mes_str} de {anio_str}"
+
+    @staticmethod #Método que se usa para que la función solo realice una tarea y no modifique ni use datos externos de la clase o instancia
+    def getFechaDate(dia: int, mes: int, anio: int) -> date:
         return date(anio, mes, dia)
 
-def main():
-    while True:
-        try:
-            # Pedir al usuario que ingrese la fecha
-            dia = int(input("Ingrese el día: "))
-            mes = int(input("Ingrese el mes: "))
-            anio = int(input("Ingrese el año: "))
+#Todo lo q es la rama principal donde va a retornar todo tanto la fecha como cadena y los datos q pide el usuario
+class Principal:
+    @staticmethod
+    def main():
+        # Pedir fecha al usuario
+        dia = int(input("Ingrese el día: "))
+        mes = int(input("Ingrese el mes: "))
+        anio = int(input("Ingrese el año: "))
 
-            # Intentar crear la fecha usando el método estático
-            fecha = FuncionesPrograma.get_fecha_date(dia, mes, anio)
-            break  # Sale del bucle si la fecha es válida
+        # Crear fecha y mostrar en cadena
+        fecha = FuncionesPrograma.getFechaDate(dia, mes, anio)
+        print("Tu fecha convertida:", FuncionesPrograma.getFechaString(fecha))
 
-        except ValueError:
-            print("Fecha inválida. Por favor, ingrese un día, mes y año correctos.\n")
-    
-    print("La fecha ingresada es:", fecha)
 
 if __name__ == "__main__":
-    main()
+    Principal.main()
+
 
 
 # ---------------------------------
