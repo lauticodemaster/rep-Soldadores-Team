@@ -82,7 +82,21 @@ print("El tamaño de la cadena es:", tamano)
 
 # 7. Leonel Fachienlli
 # ---------------------------------
+# pido la cadena al usuario
+cadena = input("Ingrese una cadena de texto: ")
 
+# calculo el tamaño de la cadena
+tamano = len(cadena)
+
+# cuento las vocales
+contador_vocales = 0
+for caracter in cadena.lower():   # .lower() convierte todo a minúsculas
+    if caracter in "aeiou":
+        contador_vocales += 1
+
+# muestro los resultados
+print("El tamaño de la cadena es:", tamano)
+print("La cantidad de vocales es:", contador_vocales)
 # ---------------------------------
 
 
@@ -134,7 +148,14 @@ for caracter in cadena:
 
 # 12. Leonel Fanchinelli
 # ---------------------------------
+cadena = "hipopotamo"
 
+# extraigo cuarta y quinta letra 
+cuarta = cadena[3]
+quinta = cadena[4]
+#escribo las letras extraidas de la palabra 
+print("Cuarta letra:", cuarta)
+print("Quinta letra:", quinta)
 # ---------------------------------
 
 
