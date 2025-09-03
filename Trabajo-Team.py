@@ -65,11 +65,11 @@ while (nota < 1) or (nota > 10):
 frase = input("Ingrese una frase: ")
 nuevaPalabra = "" #Variable vacía donde se almacenará la nueva palabra
 
-for letra in frase: #Recorre letra por letra de la frase
-    if letra.lower() in "aeiou": #En el caso de ser mayúscula la transforma en minúscula. Si es vocal... 
-        nuevaPalabra += "e" #Se agrega una "e" a la nueva palabra que anteriormente estaba vacía.
+for letra in frase: #Recorre cada letra de la frase
+    if letra.lower() == "a": #En el caso de ser mayúscula la transforma en minúscula.
+        nuevaPalabra += "e" #Remplaza la "a" por una "e"
     else:
-        nuevaPalabra += letra #Sino se deja la consonante 
+        nuevaPalabra += letra #Si no la deja igual 
 
 print(nuevaPalabra) 
 
@@ -108,7 +108,10 @@ print(nuevaPalabra)
 
 # 14. Mailén Ortiz
 # ---------------------------------
-# Escribí tu código acá
+
+
+
+
 # ---------------------------------
 
 
