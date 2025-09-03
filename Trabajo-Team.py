@@ -3,7 +3,7 @@
 # Cada sección corresponde a un integrante del grupo
 # =========================
 
-# 1. Maximiliano Méndez
+# 1. Maximiliano Mendez
 # ---------------------------------
 
 # ---------------------------------
@@ -159,7 +159,7 @@ print("Quinta letra:", quinta)
 # ---------------------------------
 
 
-# 13. Maximiliano Méndez
+# 13. Maximiliano Mendez
 # ---------------------------------
 # Escribí tu código acá
 # ---------------------------------
@@ -261,7 +261,7 @@ if __name__ == "__main__":
 # ---------------------------------
 
 
-# 19. Maximiliano Reinoso
+# 19. Maximiliano Mendez
 # ---------------------------------
 # Escribí tu código acá
 # ---------------------------------
