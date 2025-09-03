@@ -125,7 +125,7 @@ for caracter in cadena:
 # ---------------------------------
 cadena = "hipopotamo"
 
-# extraigo cuarta y quinta letra
+# extraigo cuarta y quinta letra 
 cuarta = cadena[3]
 quinta = cadena[4]
 #escribo las letras extraidas de la palabra 
