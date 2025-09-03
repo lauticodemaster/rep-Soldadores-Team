@@ -12,6 +12,20 @@
 # 2. Mailén Ortiz
 # ---------------------------------
 
+# Si se asigna un valor a una variable fuera del rango permitido y el programa no tiene ninguna verificación, el código va a seguir ejecutándose normalmente pero va a generarse un error lógico, aunque no aparezca un mensaje específico de error cuando lo ejecutemos en la terminal. Para evitarlo, se debe validar el valor usando condicionales que, en el caso que sea un valor fuera de rango, muestre un mensaje de error y vuelva a pedir el dato hasta que esté dentro del rango correcto.
+
+#Ejemplo: Si en un bucle se ingresa un valor fuera del rango estipulado este va a generar un mensaje de error y va a pedirle al usuario volver a ingresar un número dentro del rango.
+
+nota = -3 #Se le da un valor fuera de rango para que entre al bucle While 
+
+while (nota < 1) or (nota > 10):
+    nota = int(input("Ingrese una nota en el rango del 1 al 10:")) #Se ingresa una nueva nota
+
+    if (nota >= 1) and (nota <= 10): #Verifica si está en el rango, si no lo está vuelve a ejecutarse el bucle.
+        print("Nota ingresada correctamente")
+    else:
+        print(f"La nota ingresada: {nota}, no es válida. Ingrese una nota en el rango del 1 al 10")
+
 # ---------------------------------
 
 
@@ -66,7 +80,18 @@ print("La suma de los dígitos es:", suma)
 
 # 8. Mailén Ortiz
 # ---------------------------------
-# Escribí tu código acá
+
+frase = input("Ingrese una frase: ")
+nuevaPalabra = "" #Variable vacía donde se almacenará la nueva palabra
+
+for letra in frase: #Recorre cada letra de la frase
+    if letra.lower() == "a": #En el caso de ser mayúscula la transforma en minúscula.
+        nuevaPalabra += "e" #Remplaza la "a" por una "e"
+    else:
+        nuevaPalabra += letra #Si no la deja igual 
+
+print(nuevaPalabra) 
+
 # ---------------------------------
 
 
@@ -113,7 +138,9 @@ for caracter in cadena:
 
 # 14. Mailén Ortiz
 # ---------------------------------
-# Escribí tu código acá
+
+# En Python no hay variables de tipo valor como en Java. Todo en Python es un objeto y las variables apuntan a ese objeto en memoria. Si el objeto es inmutable (como números, strings o tuplas), cambiar otra variable que apunte al mismo objeto no lo afectae. Si el objeto es mutable (como listas o diccionarios), cualquier cambio desde una variable afecta a las demás que apuntan al mismo objeto.
+
 # ---------------------------------
 
 
