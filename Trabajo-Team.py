@@ -67,7 +67,25 @@ print("La suma de los dígitos es:", suma)
 
 # 4. Lautaro Fernández
 # ---------------------------------
-# Escribí tu código acá
+ Programa que ayuda a la cajera a calcular cuántos billetes y monedas se necesitan
+monto = float(input("Ingrese una cantidad de dinero: "))
+
+billetes = [200, 100, 50, 20, 10, 5, 2, 1]
+monedas = [0.50, 0.25, 0.10]
+
+print("Cantidad ingresada:", monto)
+
+for b in billetes:
+    cantidad = int(monto // b)
+    if cantidad > 0:
+        print(cantidad, "billete(s) de", b)
+    monto = round(monto - cantidad * b, 2)
+
+for m in monedas:
+    cantidad = int(monto // m)
+    if cantidad > 0:
+        print(cantidad, "moneda(s) de", m)
+    monto = round(monto - cantidad * m, 2)
 # ---------------------------------
 
 
@@ -153,7 +171,15 @@ for caracter in cadena:
 
 # 11. Lautaro Fernández
 # ---------------------------------
-# Escribí tu código acá
+# El programa pide dos palabras por teclado. Luego compara si son iguales usando ==.
+# Si coinciden, imprime un mensaje de igualdad, si no, avisa que son distintas.
+palabra1 = input("Ingrese la primera palabra: ")
+palabra2 = input("Ingrese la segunda palabra: ")
+
+if palabra1 == palabra2:
+    print("Las palabras son iguales")
+else:
+    print("Las palabras son distintas")
 # ---------------------------------
 
 
@@ -201,7 +227,20 @@ else:
 
 # 16. Lautaro Fernández
 # ---------------------------------
-# Escribí tu código acá
+# Verificar si una cadena contiene números
+
+texto = input("Ingrese una cadena: ")
+
+tiene_numero = False
+for caracter in texto:
+    if caracter.isdigit():
+        tiene_numero = True
+
+if tiene_numero:
+    print("La cadena contiene números")
+else:
+    print("La cadena NO contiene números")
+
 # ---------------------------------
 
 
