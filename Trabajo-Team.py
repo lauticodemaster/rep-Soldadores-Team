@@ -68,17 +68,22 @@ print("El tamaño de la cadena es:", tamano)
 
 # 7. Leonel Fachienlli
 # ---------------------------------
-# pido la cadena al usuario
 cadena = input("Ingrese una cadena de texto: ")
 
-# calculo el tamaño de la cadena
+# calculo el tamaño con len()
 tamano = len(cadena)
 
-# cuento las vocales
+# inicializo el contador de vocales
 contador_vocales = 0
-for caracter in cadena.lower():   # .lower() convierte todo a minúsculas
-    if caracter in "aeiou":
-        contador_vocales += 1
+
+# recorro cada letra de la cadena
+for letra in cadena:
+    # pasar la letra a minúscula para simplificar la comparación
+    letra = letra.lower()
+    
+    # si la letra es una vocal, sumar 1 al contador
+    if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
+        contador_vocales = contador_vocales + 1
 
 # muestro los resultados
 print("El tamaño de la cadena es:", tamano)
