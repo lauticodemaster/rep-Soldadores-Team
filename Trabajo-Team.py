@@ -213,8 +213,8 @@ print("Quinta letra:", quinta)
 # ---------------------------------
 #Pedir el ingreso de dos cadenas por por teclado, indicar si la segunda cadena se 
 #encuentra dentro de la primera.  
-cadena1 = input("Ingrese la primera Cadena: ")
-cadena2 = input("Ingrese la Segunda Cadena: ")
+cadena1 = input("Ingrese la primera Cadena: ").upper()
+cadena2 = input("Ingrese la Segunda Cadena: ").upper()
 #Le preguntamos a la maquina si encuentra la cadena 2 en la 1
 if cadena1.find(cadena2) == -1:
     print("La segunda cadena NO se encontro en la primera")
