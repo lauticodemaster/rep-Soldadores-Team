@@ -67,7 +67,7 @@ print("La suma de los dígitos es:", suma)
 
 # 4. Lautaro Fernández
 # ---------------------------------
- Programa que ayuda a la cajera a calcular cuántos billetes y monedas se necesitan
+ #Programa que ayuda a la cajera a calcular cuántos billetes y monedas se necesitan
 monto = float(input("Ingrese una cantidad de dinero: "))
 
 billetes = [200, 100, 50, 20, 10, 5, 2, 1]
