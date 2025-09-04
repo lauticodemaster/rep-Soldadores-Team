@@ -91,7 +91,10 @@ for m in monedas:
 
 # 5. Maximiliano Reinoso
 # ---------------------------------
-# Escribí tu código acá
+#En este programa se pide que el usuario ingrese una oracion
+oracion = input("Ingrese una oración: ")
+#La oracion sera mostrada en pantalla
+print (oracion.replace(" ",""))
 # ---------------------------------
 
 
@@ -165,8 +168,18 @@ for caracter in cadena:
 
 # 10. Maximiliano Reinoso
 # ---------------------------------
-# Escribí tu código acá
-# ---------------------------------
+#El usuario ingresa una oracion
+oracion = input("Ingrese una oración: ")
+print("Elija a que quiere convertir el texto")
+#Elije como quiere mostrarse en pantalla entre mayuscula y minuscula con la variable "Opcion"
+opcion = int(input("1)Mayusculas 2)Minusculas: "))
+#Usando if hacemos que la opcion correcta se active e imprima segun desea el usuario
+if opcion == 1:
+    print(oracion.upper())
+elif opcion ==2:
+    print(oracion.lower())
+else:
+    print("Elija un numero entre las opciones")# ---------------------------------
 
 
 # 11. Lautaro Fernández
@@ -221,8 +234,20 @@ else:
 
 # 15. Maximiliano
 # ---------------------------------
-# Escribí tu código acá
-# ---------------------------------
+x = None 
+print(x)
+#Al ejecutar imprime "None"
+#None es un "valor" que se le asigna a una variable, este valor esta vacio, no tiene nada y por ende si ejecutamos en vez de dar 0 dice none
+#Sirve para inicializar variables antes de asignarle un valor real como en el ejemplo a comtinuacion
+
+#Inicializo variable
+num = None
+
+#Ingreso valor
+num = int(input("Ingrese su edad: "))
+
+#Muestro numero
+print(num)# ---------------------------------
 
 
 # 16. Lautaro Fernández
@@ -390,5 +415,56 @@ if __name__ == "__main__":
 
 # 20. Maximiliano Reinoso
 # ---------------------------------
-# Escribí tu código acá
-# ---------------------------------
+#Fracción
+class fraccion:
+    def __init__(self, numerador, denominador):
+        self.numerador = numerador
+        self.denominador = denominador
+#armamos las operaciones suma, resta, multiplicacion y division
+    def __str__(self):
+        return f"{self.numerador}/{self.denominador}"
+    
+    def sumar(self, f2):
+        num= self.numerador * f2.denominador + f2.numerador * self.denominador
+        den= self.denominador * f2.denominador
+        return fraccion(num, den)
+    
+    def resta(self, f2):
+        num= self.numerador * f2.denominador - f2.numerador * self.denominador
+        den= self.denominador * f2.denominador
+        return fraccion(num, den)
+    
+    def multiplicar(self, f2):
+        num= self.numerador * f2.numerador
+        den = self.denominador * f2.denominador
+        return fraccion(num, den)
+    
+    def dividir(self, f2):
+        num= self.numerador * f2.denominador
+        den= self. denominador * f2.numerador
+        return fraccion(num, den)
+    
+#Codigo principal
+
+#el usuario ingresa el valor de ambas fracciones
+#fraccion 1
+num1 = int(input("Ingrese el numerador de la primera fracción: "))
+den1 = int(input("Ingrese el denominador de la primera fracción: "))
+#fraccion 2
+num2 = int(input("Ingrese el numerador de la segunda fracción: "))
+den2 = int(input("Ingrese el denominador de la segunda fracción: "))
+#agarramos los valores de numerador y denominador y armamos ambas fracciones
+f1 = fraccion(num1, den1)
+f2 = fraccion(num2, den2)
+
+#Llamamos la funcion Fraccion para hacer las operaciones correspondientes
+suma= f1.sumar(f2)
+resta= f1.resta(f2)
+multiplicacion= f1.multiplicar(f2)
+division= f1.dividir(f2)
+
+#Mostramos por pantalla los resultados
+print(f"La suma de ambas fracciones es: {suma}")
+print(f"La resta de ambas fracciones es: {resta}")
+print(f"La multiplicacion de ambas fracciones es: {multiplicacion}")
+print(f"La division de ambas fracciones es: {division}")# ---------------------------------
