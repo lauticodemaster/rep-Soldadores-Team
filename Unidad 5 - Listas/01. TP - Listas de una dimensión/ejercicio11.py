@@ -14,4 +14,3 @@ for i in range (len (lista)):
     if lista[i]==numero:
         contador+=1
 print("El numero",numero,"aparece",contador,"veces en la lista")
-
