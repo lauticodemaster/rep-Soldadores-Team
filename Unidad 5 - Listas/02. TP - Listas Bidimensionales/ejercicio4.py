@@ -15,3 +15,4 @@ for j in range(len(matriz[0])):
 
 print("Matriz original:", matriz)
 print("Matriz transpuesta:", transpuesta)
+print ("hola")
