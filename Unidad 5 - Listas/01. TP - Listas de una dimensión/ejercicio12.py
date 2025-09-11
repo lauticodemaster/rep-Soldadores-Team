@@ -1,5 +1,5 @@
-# Escribe un programa que sume dos listas de números elemento por elemento. Las 
-# listas deben tener la misma longitud - 
+# Escribe un programa que sume dos listas de números elemento por elemento. - Luciano Nicolas Ibañez
+# Las listas deben tener la misma longitud - 
 # Programa: Sumar dos listas de números elemento por elemento
 
 # Pedimos al usuario que ingrese la primera lista
