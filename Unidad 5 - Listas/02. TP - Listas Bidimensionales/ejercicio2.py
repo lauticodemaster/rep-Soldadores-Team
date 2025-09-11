@@ -1,18 +1,14 @@
 # Escribe un programa que calcule la suma de todos los elementos en una lista 
 # bidimensional - Mailen Ortiz
 
+#Se crea una lista con los valores para sumar
 lista = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
 
-suma = 0
-
-# for fila in lista: #recorre cada fila de la lista
-#     for elemento in fila: #recorre cada elemento de la fila
-#         suma += elemento
-
+#Recorre cada sublista dentro de la lista principal y suma todos los valores
 suma = sum(sum(fila) for fila in lista)
 
-print(suma)
+print(suma) 
