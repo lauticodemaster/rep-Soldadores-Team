@@ -1,25 +1,22 @@
 # Escribe un programa que permita al usuario ingresar una lista de números y calcule el 
 # promedio de los elementos - Lautaro Fernández
 
-
-# Pedimos al usuario que ingrese los números separados por espacio
-entrada = input("Ingresa una lista de números separados por espacio: ")
-
-# Separamos los números como texto
-numeros_texto = entrada.split()
-
-# Convertimos cada número de texto a entero y los guardamos en una lista
-numeros = []
-for n in numeros_texto:
-    numeros.append(int(n))
-
-# Sumamos todos los números usando un bucle
+numeros = [0] * 100   # lista con espacio reservado
 suma_total = 0
-for num in numeros:
-    suma_total += num
+contador = 0
 
-# Calculamos el promedio (suma total dividido la cantidad de números)
-promedio = suma_total / len(numeros)
+dato = input("Ingresa un número (o 'fin' para terminar): ")
 
-# Mostramos el resultado al usuario
-print("El promedio de los números es:", promedio)
+while dato != "fin":
+    numero = int(dato)
+    numeros[contador] = numero
+    suma_total = suma_total + numero
+    contador = contador + 1
+    dato = input("Ingresa un número (o 'fin' para terminar): ")
+
+if contador > 0:
+    promedio = suma_total / contador
+    print("El promedio de los números es:", promedio)
+else:
+    print("No ingresaste ningún número.")
+
