@@ -8,7 +8,7 @@ lista = [
     [7, 8, 9]
 ]
 
-#Recorre cada sublista dentro de la lista principal y suma todos los valores
+#Recorre cada sublista dentro de la lista principal luego recorre cada número de la fila y suma todos los valores.
 
 suma = 0
 
@@ -16,4 +16,4 @@ for fila in lista:
     for numero in fila:
         suma += numero
 
-print(suma) 
+print(f"La suma de todos los elementos es: {suma}") 

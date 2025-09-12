@@ -9,10 +9,10 @@ for contador in range(cantidadElementos):
 
 print(f"Lista Ingresada: {lista}")
 
-listaInvertida = []
+listaInvertida = [] #Se crea una nueva lista para almacenar los números invertidos
 
-for indice in range(cantidadElementos -1, -1, -1):
-    listaInvertida.append(lista[indice])
+for indice in range(cantidadElementos -1, -1, -1): #Recorre del último elemento al primero
+    listaInvertida.append(lista[indice]) #Los agrega a la lista invertida
 
 print(f"Lista Invertida: {listaInvertida}")
 
