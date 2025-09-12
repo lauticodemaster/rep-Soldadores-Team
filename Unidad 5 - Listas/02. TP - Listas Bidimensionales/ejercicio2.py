@@ -9,6 +9,11 @@ lista = [
 ]
 
 #Recorre cada sublista dentro de la lista principal y suma todos los valores
-suma = sum(sum(fila) for fila in lista)
+
+suma = 0
+
+for fila in lista:
+    for numero in fila:
+        suma += numero
 
 print(suma) 

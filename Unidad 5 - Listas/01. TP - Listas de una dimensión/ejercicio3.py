@@ -7,8 +7,13 @@ for contador in range(cantidadElementos):
     elemento = input(f"Ingrese el elemento {contador +1}: ") #El usuario ingresa el valor
     lista.append(elemento) #El valor se guarda en la lista anteriormente vacía 
 
-lista.reverse() #Invierte la lista creada 
+print(f"Lista Ingresada: {lista}")
 
-print(f"Lista Invertida: {lista}")
+listaInvertida = []
+
+for indice in range(cantidadElementos -1, -1, -1):
+    listaInvertida.append(lista[indice])
+
+print(f"Lista Invertida: {listaInvertida}")
 
 
