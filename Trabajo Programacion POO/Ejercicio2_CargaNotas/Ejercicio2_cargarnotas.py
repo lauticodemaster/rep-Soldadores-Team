@@ -29,7 +29,12 @@ def main():
 
         while True:
             print("\n--- INGRESE NOTA DEL ALUMNO ---")
+            
+            # Validación para que la cátedra solo contenga letras y espacios
             catedra = input("Ingrese nombre de cátedra: ")
+            if not all(c.isalpha() or c.isspace() for c in catedra):
+                print("La cátedra solo puede contener letras y espacios.")
+                continue
 
             try:
                 notaExamen = float(input("Ingrese nota (1-10): "))
