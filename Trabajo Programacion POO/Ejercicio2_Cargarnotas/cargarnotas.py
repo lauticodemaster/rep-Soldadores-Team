@@ -8,10 +8,20 @@ def main():
         print("\n--- INGRESE DATOS DEL ALUMNO ---")
         nombre = input("Ingrese nombre completo: ")
 
+        # Validar que el nombre solo tenga letras y espacios
+        es_valido = True
+        for c in nombre:
+            if not (c.isalpha() or c == " "):
+                es_valido = False
+                break
+        if not es_valido or nombre.strip() == "":
+            print("El nombre solo puede contener letras y espacios.")
+            continue
+
         # Validar nombre repetido
         nombre_repetido = False
         for a in alumnos:
-            if a.nombreCompleto == nombre:
+            if a.nombreCompleto.lower() == nombre.lower():
                 nombre_repetido = True
                 break
         if nombre_repetido:
@@ -39,6 +49,7 @@ def main():
         while True:
             print("\n--- INGRESE NOTA DEL ALUMNO ---")
             catedra = input("Ingrese nombre de cátedra: ")
+
             try:
                 notaExamen = float(input("Ingrese nota (1-10): "))
                 if notaExamen < 1 or notaExamen > 10:
