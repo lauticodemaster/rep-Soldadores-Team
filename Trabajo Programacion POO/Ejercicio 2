@@ -1,0 +1,78 @@
+class Nota:
+    def __init__(self, catedra, notaExamen):
+        self.catedra = catedra
+        self.notaExamen = notaExamen
+
+
+class Alumno:
+    def __init__(self, nombreCompleto, legajo):
+        self.nombreCompleto = nombreCompleto
+        self.legajo = legajo
+        self.notas = []  # lista de objetos Nota
+
+    # método para agregar una nota
+    def agregar_nota(self, nota):
+        self.notas.append(nota)
+
+    # método para calcular promedio
+    def calcular_promedio(self):
+        total = 0
+        cantidad = 0
+        for n in self.notas:
+            total = total + n.notaExamen
+            cantidad = cantidad + 1
+
+        if cantidad > 0:
+            return total / cantidad
+        else:
+            return 0
+
+
+class CargaNotas:
+    def main():
+        alumnos = []
+
+        while True:
+            print("\n--- CARGA DE DATOS DEL ALUMNO ---")
+            nombre = input("Ingrese nombre completo: ")
+            legajo = int(input("Ingrese legajo: "))
+
+            alumno = Alumno(nombre, legajo)
+
+            # cargar notas
+            while True:
+                print("\n--- CARGA DE NOTAS ---")
+                catedra = input("Ingrese nombre de la cátedra: ")
+                notaExamen = float(input("Ingrese nota del examen: "))
+
+                nota = Nota(catedra, notaExamen)
+                alumno.agregar_nota(nota)
+
+                salirNotas = input("¿Desea salir de la carga de notas? (s/n): ").lower()
+                if salirNotas == "s":
+                    break
+
+            # validar que tenga al menos una nota
+            if len(alumno.notas) == 0:
+                print("Debe ingresar al menos una nota.")
+            else:
+                alumnos.append(alumno)
+
+            salirAlumno = input("¿Desea salir de la carga de alumnos? (s/n): ").lower()
+            if salirAlumno == "s":
+                break
+
+        # mostrar resultados
+        print("\n===== INFORME FINAL =====")
+        for a in alumnos:
+            print("\nAlumno:", a.nombreCompleto)
+            print("Legajo:", a.legajo)
+            print("Notas:")
+            for n in a.notas:
+                print(" -", n.catedra, ":", n.notaExamen)
+            print("Promedio:", a.calcular_promedio())
+
+
+# para ejecutar el programa
+if __name__ == "__main__":
+    CargaNotas.main()
