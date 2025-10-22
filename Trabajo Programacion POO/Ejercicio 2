@@ -8,13 +8,13 @@ class Alumno:
     def __init__(self, nombreCompleto, legajo):
         self.nombreCompleto = nombreCompleto
         self.legajo = legajo
-        self.notas = []  # lista de objetos Nota
+        self.notas = []  # lista para guardar las notas
 
-    # método para agregar una nota
+    # Método para agregar una nota
     def agregar_nota(self, nota):
         self.notas.append(nota)
 
-    # método para calcular promedio
+    # Método para calcular el promedio de las notas
     def calcular_promedio(self):
         total = 0
         cantidad = 0
@@ -30,39 +30,80 @@ class Alumno:
 
 class CargaNotas:
     def main():
-        alumnos = []
+        alumnos = []  # lista para guardar todos los alumnos
 
         while True:
-            print("\n--- CARGA DE DATOS DEL ALUMNO ---")
-            nombre = input("Ingrese nombre completo: ")
-            legajo = int(input("Ingrese legajo: "))
+            print("\n=== CARGA DE DATOS DEL ALUMNO ===")
+
+            # Validar nombre no repetido
+            while True:
+                nombre = input("Ingrese nombre completo del alumno: ")
+                existe_nombre = False
+                for a in alumnos:
+                    if a.nombreCompleto.lower() == nombre.lower():
+                        existe_nombre = True
+                        break
+                if existe_nombre:
+                    print(" Ya existe un alumno con ese nombre. Intente con otro.")
+                else:
+                    break
+
+            # Validar legajo (único y exactamente de 5 cifras)
+            while True:
+                legajo = input("Ingrese legajo (exactamente 5 cifras): ")
+
+                # Validar que sea numérico y tenga 5 cifras
+                if not legajo.isdigit() or len(legajo) != 5:
+                    print(" El legajo debe tener exactamente 5 cifras numéricas (ejemplo: 12345).")
+                    continue
+
+                legajo = int(legajo)
+
+                # Verificar si ya existe ese legajo
+                existe_legajo = False
+                for a in alumnos:
+                    if a.legajo == legajo:
+                        existe_legajo = True
+                        break
+
+                if existe_legajo:
+                    print(" Ya existe un alumno con ese legajo. Intente con otro.")
+                else:
+                    break
 
             alumno = Alumno(nombre, legajo)
 
-            # cargar notas
+            # Cargar notas del alumno
             while True:
                 print("\n--- CARGA DE NOTAS ---")
                 catedra = input("Ingrese nombre de la cátedra: ")
-                notaExamen = float(input("Ingrese nota del examen: "))
+
+                # Validar nota entre 0 y 10
+                while True:
+                    notaExamen = float(input("Ingrese nota del examen (0 a 10): "))
+                    if notaExamen < 0 or notaExamen > 10:
+                        print(" La nota debe estar entre 0 y 10.")
+                    else:
+                        break
 
                 nota = Nota(catedra, notaExamen)
                 alumno.agregar_nota(nota)
 
-                salirNotas = input("¿Desea salir de la carga de notas? (s/n): ").lower()
+                salirNotas = input("¿Desea dejar de cargar notas para este alumno? (s/n): ").lower()
                 if salirNotas == "s":
                     break
 
-            # validar que tenga al menos una nota
+            # Validar que tenga al menos una nota
             if len(alumno.notas) == 0:
-                print("Debe ingresar al menos una nota.")
+                print("Debe ingresar al menos una nota. El alumno no será guardado.")
             else:
                 alumnos.append(alumno)
 
-            salirAlumno = input("¿Desea salir de la carga de alumnos? (s/n): ").lower()
+            salirAlumno = input("¿Desea dejar de cargar alumnos? (s/n): ").lower()
             if salirAlumno == "s":
                 break
 
-        # mostrar resultados
+        # Mostrar toda la información cargada
         print("\n===== INFORME FINAL =====")
         for a in alumnos:
             print("\nAlumno:", a.nombreCompleto)
@@ -70,9 +111,13 @@ class CargaNotas:
             print("Notas:")
             for n in a.notas:
                 print(" -", n.catedra, ":", n.notaExamen)
-            print("Promedio:", a.calcular_promedio())
+            print("Promedio:", round(a.calcular_promedio(), 2))  # promedio con 2 decimales
 
 
-# para ejecutar el programa
+# Ejecutar el programa principal
 if __name__ == "__main__":
     CargaNotas.main()
+
+
+
+
