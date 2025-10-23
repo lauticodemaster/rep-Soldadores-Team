@@ -90,7 +90,7 @@ matriz.mostrar_celdas()
 seguir_busqueda = "s"
 
 while seguir_busqueda == "s" or seguir_busqueda == "S":
-    print("buscar una celda especifica")
+    print("buscar una celda especifica para visualizar su contenido")
 
     # pedir fila a buscar
     texto_fila_buscar = ""
@@ -114,3 +114,4 @@ while seguir_busqueda == "s" or seguir_busqueda == "S":
     seguir_busqueda = input("desea buscar otra celda? (s/n): ")
 
 print("programa terminado")
+
